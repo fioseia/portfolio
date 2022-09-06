@@ -1,0 +1,241 @@
+@use '../../styles/variables';
+
+.header {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+
+	.header-section {
+		width: 50%;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+
+		.header-title {
+			font-size: variables.$font-xl;
+			text-transform: uppercase;
+			font-weight: 800;
+			margin-top: 100px;
+			font-family: 'Oswald', sans-serif;
+		}
+
+		.header-subtitle {
+			font-size: variables.$font-l;
+			text-transform: uppercase;
+			font-weight: 600;
+			margin: 40px 0;
+			font-family: 'Oswald', sans-serif;
+			display: flex;
+			align-items: baseline;
+		}
+
+		.header-description {
+			font-style: italic;
+			font-size: variables.$font-m;
+			font-weight: 400;
+			font-family: 'Poppins', sans-serif;
+		}
+
+		.crossword-container {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			z-index: 2;
+			padding: 10px;
+
+			.crossword-grid {
+				flex: 1;
+				display: grid;
+				grid-template-columns: repeat(10, minmax(30px, 40px));
+				grid-template-rows: repeat(11, minmax(30px, 40px));
+				border-collapse: collapse;
+
+				.projects {
+					grid-row: 1 / 9;
+					grid-column: 6 / 7;
+					display: flex;
+					flex-direction: column;
+					border-collapse: collapse;
+				}
+
+				.challenges {
+					grid-row: 5 / 6;
+					grid-column: 1 / 11;
+					display: flex;
+					flex-direction: row;
+					border-collapse: collapse;
+				}
+
+				.contact {
+					grid-row: 7 / 8;
+					grid-column: 3 / 10;
+					display: flex;
+					flex-direction: row;
+					border-collapse: collapse;
+				}
+
+				.about {
+					grid-row: 7 / 12;
+					grid-column: 7 / 8;
+					display: flex;
+					flex-direction: column;
+					border-collapse: collapse;
+				}
+
+				.square {
+					position: relative;
+					display: flex;
+					height: 100%;
+					width: 100%;
+					justify-content: center;
+					align-items: center;
+
+					box-shadow: 2px 0 0 0 #000, 0 2px 0 0 #000, 2px 2px 0 0 #000,
+						2px 0 0 0 #000 inset, 0 2px 0 0 #000 inset;
+
+					.letter {
+						text-transform: uppercase;
+						font-weight: 600;
+						font-size: 24px;
+						opacity: 1;
+					}
+
+					.visible {
+						display: inline;
+					}
+
+					.hidden {
+						display: none;
+					}
+					span {
+						position: absolute;
+						top: 5px;
+						left: 5px;
+						font-size: 10px;
+						font-weight: 600;
+					}
+				}
+			}
+
+			.crossword-ref {
+				//align-self: flex-start;
+				width: 40%;
+				padding: 20px;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				span {
+					text-align: center;
+					font-weight: 600;
+					font-size: variables.$font-m;
+				}
+
+				div {
+					margin: 30px 0;
+				}
+
+				p {
+					//font-style: italic;
+					font-weight: 500;
+					font-size: variables.$font-s;
+					margin: 10px 0;
+					letter-spacing: 1px;
+				}
+
+				#header-clue-button {
+					background-color: #fff;
+					border: 2px solid #010101;
+					padding: 5px 20px;
+					color: #010101;
+					border-radius: 14px;
+					text-transform: uppercase;
+					font-weight: 800;
+					font-family: 'Poppins', sans-serif;
+					letter-spacing: 2px;
+					font-family: 100%;
+					cursor: pointer;
+					transition: all 0.3s cubic-bezier(0.43, 0.13, 0.23, 0.96);
+
+					&:hover {
+						transform: scale(1.05);
+					}
+				}
+
+				.crossword-input {
+					display: none;
+
+					@media (max-width: 768px) {
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+}
+
+.Toastify__toast {
+	background-color: #010101;
+	color: #f1f1f1;
+	font-weight: 600;
+}
+
+@media (max-width: 600px) {
+	.header {
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+    max-width: 100vw;
+    padding:0;
+
+		.header-section {
+			flex:1;
+			width: 100% !important;
+			align-items: center;
+			justify-content: center;
+
+
+			.header-title {
+				font-size: 3rem;
+			}
+			.header-subtitle {
+				font-size: 2rem;
+			}
+      .header-description {
+        font-size: 1rem;
+        margin-bottom: 10%;;
+      }
+
+      .header-mobile-links{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 4px solid #010101;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 600;
+        font-size:3rem;
+
+        &:nth-last-child(1){
+          border-bottom: 4px solid #010101;
+        }
+      }
+		}
+	}
+
+	.crossword-grid {
+		margin: 20px 0;
+	}
+}

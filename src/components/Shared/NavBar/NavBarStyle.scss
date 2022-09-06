@@ -1,0 +1,12 @@
+.navbar {
+	position: fixed;
+	background-color: transparent;
+	width: 100vw;
+	display: flex;
+	flex-direction: row;
+  z-index: 100;
+
+  // @media (max-width: 600px) {
+  //   background-color: #f1f1f1;
+  // }
+}

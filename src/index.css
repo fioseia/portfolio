@@ -1,0 +1,4 @@
+@font-face {
+  font-family: 'Syncopate';
+  src: local('Syncopate'), url(./utils/Syncopate-Regular.ttf) format('truetype');
+}

@@ -1,0 +1,30 @@
+.links-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.links-item {
+		text-transform: uppercase;
+		color: black;
+		font-weight: 600;
+		margin: 0 20px;
+    letter-spacing:2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span{
+      padding-top: 2px;
+    }
+	}
+  .selected{
+    background-color:#010101;
+    padding: 5px 10px;
+    border-radius:10px;
+    
+    span{
+      color: #f1f1f1;
+    }
+
+  }
+}

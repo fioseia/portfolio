@@ -70,7 +70,7 @@ const Contact = () => {
 			},
 			{
 				left: screen === 'desktop' ? '17vh' : '0vh',
-				top: screen === 'desktop' ? '30vh' : '12vh',
+				top: screen === 'desktop' ? '30vh' : '110px',
 				opacity: 0.2,
 				duration: 1,
 				scale: 5,

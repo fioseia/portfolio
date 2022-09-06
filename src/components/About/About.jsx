@@ -54,26 +54,28 @@ const About = () => {
 		});
 
 		// INITIAL TITLE ANIMATION //
-		tl.fromTo(
-			'.about-title',
-			{
-				stagger: 0.1,
-				ease: 'power2',
-				scale: 4,
-				lazy: false,
-				top: y,
-				left: x,
-			},
-			{
-				left: '5vw',
-				top: screen === 'desktop' ? '30vh' : '12vh',
-				opacity: 0.5,
-				duration: 1,
-				scale: 5,
-				color: '#f1f1f1',
-			},
-			'start'
-		);
+		if (screen === 'desktop') {
+			tl.fromTo(
+				'.about-title',
+				{
+					stagger: 0.1,
+					ease: 'power2',
+					scale: 4,
+					lazy: false,
+					top: y,
+					left: x,
+				},
+				{
+					left: '5vw',
+					top: screen === 'desktop' ? '30vh' : '12vh',
+					opacity: 0.5,
+					duration: 1,
+					scale: screen === 'desktop' ? 5 : 4,
+					color: '#f1f1f1',
+				},
+				'start'
+			);
+		}
 		tl.to('.about-container', {
 			backgroundColor: color,
 			ease: 'power2',
@@ -135,7 +137,7 @@ const About = () => {
 
 		ScrollTrigger.update();
 		return () => (tl = null);
-	}, [x, y,screen]);
+	}, [x, y, screen]);
 
 	return (
 		<>
@@ -211,10 +213,16 @@ const About = () => {
 							<div className='tech-item'>
 								<FaCss3Alt /> CSS3
 							</div>
-							<div className='tech-item' style={{ fontSize: screen === 'desktop' ? '2.3vw' : '1rem' }}>
+							<div
+								className='tech-item'
+								style={{ fontSize: screen === 'desktop' ? '2.3vw' : '1rem' }}
+							>
 								<SiBootstrap /> Bootstrap
 							</div>
-							<div className='tech-item' style={{ fontSize: screen === 'desktop' ? '2.1vw' : '0.8rem' }}>
+							<div
+								className='tech-item'
+								style={{ fontSize: screen === 'desktop' ? '2.1vw' : '0.8rem' }}
+							>
 								<SiFramer /> Framer Motion
 							</div>
 							<div className='tech-item'>
@@ -226,7 +234,10 @@ const About = () => {
 							<div className='tech-item'>
 								<SiRedux /> Redux
 							</div>
-							<div className='tech-item' style={{ fontSize: screen === 'desktop' ?'2.3vw' : '1rem'}}>
+							<div
+								className='tech-item'
+								style={{ fontSize: screen === 'desktop' ? '2.3vw' : '1rem' }}
+							>
 								<TbBrandReactNative /> React Native
 							</div>
 							<div className='tech-item'>
@@ -235,7 +246,10 @@ const About = () => {
 							<div className='tech-item'>
 								<FaNodeJs /> NodeJs
 							</div>
-							<div className='tech-item' style={{ fontSize: screen === 'desktop' ? '2.3vw' : '1rem'}}>
+							<div
+								className='tech-item'
+								style={{ fontSize: screen === 'desktop' ? '2.3vw' : '1rem' }}
+							>
 								<SiPostgresql /> PostgresSQL
 							</div>
 							<div className='tech-item'>

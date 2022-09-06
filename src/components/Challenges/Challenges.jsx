@@ -109,7 +109,7 @@ const Challenges = () => {
 			},
 			{
 				left: '5vw',
-				top: screen === 'desktop' ? '30vh' : '12vh',
+				top: screen === 'desktop' ? '30vh' : '110px',
 				opacity: 0.2,
 				duration: 1,
 				scale: screen === 'desktop' ? 5 : 4,

@@ -12,7 +12,7 @@ ReactDOM.render(
 		<Suspense fallback={<Loading />}>
 			<Provider store={store}>
 				<BrowserRouter>
-					<App />
+					<App style={{maxWidth: '100vw'}}/>
 				</BrowserRouter>
 			</Provider>
 		</Suspense>

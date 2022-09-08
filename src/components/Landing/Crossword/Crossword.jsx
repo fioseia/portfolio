@@ -59,16 +59,6 @@ const Crossword = () => {
 				</div>
 				<div>
 					<button id='header-clue-button'onClick={handleClue}>Give me a clue</button>
-					<div className='crossword-input'>
-						<form onSubmit={handleSubmit}>
-							<input
-								type='text'
-								value={letter}
-								onChange={(e) => setLetter(e.target.value)}
-							/>
-							<input type='submit' />
-						</form>
-					</div>
 				</div>
 			</motion.div>
       <ToastContainer

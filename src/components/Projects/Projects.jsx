@@ -37,6 +37,7 @@ const Project = ({
 					muted
 					data-scroll
           autoPlay={screen === 'mobile' ? true: false}
+          controls
 				></video>
 				<div className='project-info' data-scroll data-scroll-speed={6}>
 					<span className='project-info-id'>{`#0${id}`}</span>

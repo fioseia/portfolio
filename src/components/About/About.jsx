@@ -23,6 +23,8 @@ import {
 import { TbBrandReactNative } from 'react-icons/tb';
 import { DiScrum } from 'react-icons/di';
 import { colorLinks } from '../../utils/colorLink';
+import FiorenzaSeiaCVEspanol from '../../assets/FiorenzaSeia-CVEspanol.pdf'
+import FiorenzaSeiaCVEnglish from '../../assets/FiorenzaSeia-resume-FullstackDeveloper.pdf'
 
 import './AboutStyles.scss';
 
@@ -183,24 +185,21 @@ const About = () => {
 					data-scroll-section
 					className='about-third-section'
 				>
-					<h3>Two importants aspects that make me who I am today:</h3>
+					{/* <h3>Two importants aspects that make me who I am today:</h3> */}
 					<p>
-						I have a degree in Medicine and a postgraduate degree in Pediatrics.
-						After a few years working in this field I`ve found in the IT world
-						another passion. This experience has allowed me to work in different
-						work enviroments and cultures, which brought with it the development
-						of <span>empathy, communication and responsibility</span>
-					</p>
-					<p>
-						As an Argentine and Latin American, I am used to change,
-						flexibility, and challenges. These situations have allowed me to
-						develop disruptive skills concerning creative{' '}
-						<span>problem solving</span>, both personally and professionally.
-					</p>
-					<p>
-						I was able to all these tools in my training and profile as a
-						developer when coordinating work teams and developing projects with
-						unknown technologies in brief periods.
+						After graduating as a doctor and dedicating myself to pediatrics for
+						4 years, I launched to study programming out of simple curiosity.
+						When writing my first algorithm in Javascript I was completely
+						hooked by this world of technologies that I long to learn. My
+						background has allowed me to work in different work enviroments and
+						cultures, which brought with it the development of{' '}
+						<span>empathy, communication and responsibility</span>. After some
+						thinking I decided to leave my comfort zone convinced that my
+						vocation for <span>finding solutions</span> to people's problems, paying special
+						attention to providing a <span>good experience</span> in the meantime, are very helpful in this field. 
+            I	look forward to facing challenges that drive me to develop both
+						professionally and personally. <span>My curiosity a year later is even
+						greater.</span>
 					</p>
 				</div>
 				<div data-scroll-section className='about-fourth-section'>
@@ -272,6 +271,10 @@ const About = () => {
 							</div>
 						</div>
 					</div>
+          <div className='about-button-wrapper'>
+            <a href={FiorenzaSeiaCVEnglish} download>English Resume</a>
+            <a href={FiorenzaSeiaCVEspanol} download>CV Español</a>
+          </div>
 				</div>
 			</div>
 		</>

@@ -6,10 +6,10 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { BiCodeCurly } from 'react-icons/bi';
 import { BsGithub } from 'react-icons/bs';
-import { projects } from '../../utils/projects-data';
+import { challenges } from '../../utils/challenges-data';
+import { colorLinks } from '../../utils/colorLink';
 
 import './ChallengesStyles.scss';
-import { colorLinks } from '../../utils/colorLink';
 
 const Project = ({
 	id,
@@ -41,7 +41,7 @@ const Project = ({
 					<span className='project-info-title'>{title}</span>
 					<p>{description}</p>
 					<p id='project-info-tech'>{technologies}</p>
-					<div className='project-links'>
+					{/* <div className='project-links'>
 						<a href={deploy}>
 							<div>
 								<BiCodeCurly
@@ -56,7 +56,7 @@ const Project = ({
 								<p>Repository</p>
 							</div>
 						</a>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</div>
@@ -148,7 +148,7 @@ const Challenges = () => {
 					className='projects-sections-container'
 					id='projects-section'
 				>
-					{projects.map((project) => (
+					{challenges.map((project) => (
 						<Project key={`${project.id}-${project.title}`} {...project} />
 					))}
 				</div>

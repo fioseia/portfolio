@@ -116,7 +116,7 @@ const Header = () => {
 							transition: { ...defaultTransition, delay: 3 },
 						}}
 					>
-						Type your answers
+						Use your keyword
 						<motion.div
 							style={{ marginLeft: '10px' }}
 							animate={{

@@ -16,11 +16,6 @@ export const pagesData = [
 		slug: 'projects',
 	},
 	{
-		title: 'Challenges',
-		color: '#275336',
-		slug: 'challenges',
-	},
-	{
 		title: 'About',
 		color: '#F4BF3C',
 		slug: 'about',
@@ -29,5 +24,10 @@ export const pagesData = [
 		title: 'Contact',
 		color: '#C54126',
 		slug: 'contact',
+	},
+	{
+		title: 'Challenges',
+		color: '#275336',
+		slug: 'challenges',
 	},
 ];

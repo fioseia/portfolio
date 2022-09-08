@@ -46,15 +46,15 @@ const Crossword = () => {
 						over a period of time and intended to achieve a particular purpose.
 						(plural)
 					</p>
+					<p>2 - Preposition. On the subject of, or connected with.</p>
 					<p>
-						2 - Noun. Something that needs mental or physical effort in order to
+						3 - Verb. To communicate with someone by calling or sending them a
+						letter, email, etc.
+					</p>
+					<p>
+						4 - Noun. Something that needs mental or physical effort in order to
 						be done successfully and therefore tests a person's ability.
 						(plural)
-					</p>
-					<p>3 - Preposition. On the subject of, or connected with.</p>
-					<p>
-						4 - Verb. To communicate with someone by calling or sending them a
-						letter, email, etc.
 					</p>
 				</div>
 				<div>

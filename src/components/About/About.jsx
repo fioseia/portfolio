@@ -24,7 +24,7 @@ import { TbBrandReactNative } from 'react-icons/tb';
 import { DiScrum } from 'react-icons/di';
 import { colorLinks } from '../../utils/colorLink';
 import FiorenzaSeiaCVEspanol from '../../assets/FiorenzaSeia-CVEspanol.pdf'
-import FiorenzaSeiaCVEnglish from '../../assets/FiorenzaSeia-resume-FullstackDeveloper.pdf'
+import FiorenzaSeiaCVEnglish from '../../assets/Fiorenza_Seia_resume_FS.pdf'
 
 import './AboutStyles.scss';
 
